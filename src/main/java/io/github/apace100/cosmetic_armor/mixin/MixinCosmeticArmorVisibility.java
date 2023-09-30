@@ -88,6 +88,7 @@ public abstract class MixinCosmeticArmorVisibility<T extends LivingEntity, M ext
 		if(!cosmeticStack.isEmpty() && (equippedStack.isEmpty() || !equippedStack.isIn(CosmeticArmor.ALWAYS_VISIBLE))) {
 			return cosmeticStack;
 		}
+		if (equippedStack == null) return ItemStack.EMPTY;
 		return equippedStack;
 	}
 
